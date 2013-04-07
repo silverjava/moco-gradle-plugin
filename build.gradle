@@ -20,7 +20,7 @@ repositories {
 dependencies {
   groovy localGroovy()
   compile gradleApi()
-  compile 'com.github.dreamhead:moco-runner:0.6.3-SNAPSHOT'
+  compile 'com.github.dreamhead:moco-runner:0.6.4-SNAPSHOT'
 }
 
 uploadArchives {
@@ -36,12 +36,12 @@ uploadArchives {
                 name project.name
                 packaging 'jar'
                 description 'Testing'
-                url 'testing'
+                url 'https://github.com/silverjava/moco-gradle-plugin'
 
                 scm {
-                    url 'scm:git@github.com:dreamhead/moco.git'
-                    connection 'scm:git@github.com:dreamhead/moco.git'
-                    developerConnection 'git@github.com:dreamhead/moco.git'
+                    url 'scm:git@github.com:silerjava/moco-gradle-plugin.git'
+                    connection 'scm:git@github.com:silverjava/moco-gradle-plugin.git'
+                    developerConnection 'git@github.com:silverjava/moco-gradle-plugin.git'
                 }
 
                 licenses {
@@ -61,4 +61,8 @@ uploadArchives {
             }
         }
     }
+}
+
+task wrapper(type: Wrapper) << {
+    gradleVersion = '1.4'
 }

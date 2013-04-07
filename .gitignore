@@ -1,0 +1,4 @@
+build/
+moco-gradle-plugin.i*
+out/
+.gradle/
