@@ -17,7 +17,7 @@ class StartMocoTask extends DefaultTask {
 
     @TaskAction
     def start() {
-        Main.main(['-p', port, '-c', configFile.absolutePath] as String[])
+        Main.main(['start', '-p', port, '-c', configFile.absolutePath] as String[])
         println "Started moco server at port ${port} with file ${configFile.absolutePath}"
 
         if (!daemon) {
