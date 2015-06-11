@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-  groovy localGroovy()
+  compile localGroovy()
   compile gradleApi()
   compile 'com.github.dreamhead:moco-runner:0.6.4-SNAPSHOT'
 }
